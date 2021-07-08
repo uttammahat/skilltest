@@ -19,27 +19,6 @@
         }
     }
 
-    &:not(.fixed-nav) {
-        .navbarSupportedContent {
-            position: fixed;
-            top: 104px;
-            left: 0;
-            right: 0;
-            height: 0;
-        }
-
-        ul.navbar-nav {
-            position: absolute;
-            background: #007bff;
-            top: 57px;
-            left: 0;
-            right: 0;
-            height: calc(100vh - 164px);
-            padding-left: 36px;
-            // padding-left: 52px;
-            padding-top: 20px;
-        }
-    }
 
     .navbar-nav {
         .nav-item:not(:last-child) {
