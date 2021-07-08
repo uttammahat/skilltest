@@ -1,5 +1,3 @@
-# Webpack Bootstrap 4 template
-
 ### Description
 
 This project contains preconfigured Webpack 4 to work with the following tasks:
