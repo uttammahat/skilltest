@@ -1,0 +1,172 @@
+/**
+ * Basic typography style for copy text
+ */
+
+// html {
+//   font-family: $sansSerif, sans-serif;
+//   font-weight: normal;
+//   color: $black;
+//   line-height: $baseLineHeight;
+//   font-size: 14px;
+
+//   @media only screen and (min-width: $smallBreakpoint) {
+//     font-size: 15px;
+//   }
+
+//   @media only screen and (min-width: $largeBreakpoint) {
+//     font-size: $baseFontSize;
+//   }
+// }
+
+body {
+  @include font-source-primary(calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300))), $text-color, normal, 1.4);
+}
+
+p {
+  letter-spacing: -0.01em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+h1,
+h2,
+.sub-header--lg,
+h3,
+.sub-header--md,
+h4,
+.sub-header--ms,
+.btn {
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+h2,
+.sub-header--lg,
+h3,
+.sub-header--md,
+h4,
+.sub-header--ms {
+  line-height: 1.2;
+}
+
+h2,
+.sub-header--lg {
+  font-size: 24px;
+}
+
+h3,
+.sub-header--md {
+  font-size: 20px;
+}
+
+h4,
+.sub-header--ms {
+  font-size: 18px;
+}
+
+// h5,
+// .section-header {
+//   color: $brand-color;
+// }
+
+h5,
+.sub-header--sm,
+.btn {
+  font-size: 14px;
+}
+
+h6,
+.sub-header--xs {
+  font-size: 10px;
+}
+
+h5,
+.sub-header--sm,
+h6,
+.sub-header--xs {
+  letter-spacing: 0.05em;
+}
+
+h5,
+.sub-header--sm,
+h6,
+.sub-header--xs,
+.btn {
+  @include font-source-secondary(14px, false, bold, 1.0);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.--light-text-color {
+  color: $light-color;
+}
+
+.--primary-text-color {
+  color: $brand-color;
+}
+
+h1 {
+  @include fluid-font(300, 1600, 28, 64);
+}
+
+@media screen and (min-width: 768px) {
+
+  h1 {
+    // font-size: 64px;
+    @include fluid-font(300, 1600, 28, 64);
+  }
+
+  h2,
+  .sub-header--lg {
+    font-size: 44px;
+  }
+
+  h3,
+  .sub-header--md {
+    font-size: 32px;
+  }
+
+  h4,
+  .sub-header--ms,
+  h5,
+  .sub-header--sm {
+    font-size: 24px;
+  }
+
+  h6,
+  .sub-header--xs {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+}
+
+@include respond-to('dektop') {
+  h1 {
+    font-size: 64px;
+  }
+}

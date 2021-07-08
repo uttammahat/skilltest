@@ -1,0 +1,300 @@
+.tiles-section {
+
+    .sub-header--sm {
+        // grid-area: grid__tiles-header;
+        // margin-top: 98px;
+        margin-bottom: 16px;
+    }
+
+    .sub-header--sm {
+        // margin-bottom: 24px;
+    }
+
+    .news-date {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-wrap(nowrap);
+    }
+
+    span.news-month {
+        padding-right: 40px;
+        position: relative;
+    }
+
+    span.news-month::after {
+        @include pseudo($content: '', $display: block, $pos: absolute);
+        width: 32px;
+        height: 1px;
+        background: #c4c4c4;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 4px;
+    }
+
+    figure,
+    .figure-lg-left,
+    .figure-lg-right,
+    .figure-md-left,
+    .figure-md-right {
+        .figure-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 1;
+        }
+    }
+
+    .grid__tiles-footer-btn {
+        margin-top: 24px;
+    }
+}
+
+.grid-parent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    figure {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .figure-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all .2s ease;
+    }
+
+    .border-all {
+        border: 1px solid;
+
+        &.border--light {
+            border-color: $light-color;
+        }
+
+        &.border--light-grey {
+            border-color: $light-grey;
+        }
+    }
+
+}
+
+.tiles__grid-item,
+.gallery__grid-item {
+    width: 256px;
+    flex: 0 0 auto;
+}
+
+.beneficiaries__figures-item {
+    width: 202px;
+    flex: 0 0 auto;
+}
+
+.padding-all {
+    padding: 16px;
+}
+
+.figure-caption {
+    margin-top: 12px;
+
+    .news-date {
+        @include font-source-secondary($size: 10px, $colour: false, $weight: bold, $lh: 1);
+        letter-spacing: 0.05em;
+    }
+
+    .figure-caption__title {
+        color: $dark-grey;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin-top: 12px;
+    }
+}
+
+.grid__tiles-1 {
+    grid-area: grid__tiles-1;
+}
+
+.grid__tiles-2 {
+    grid-area: grid__tiles-2;
+}
+
+.grid__tiles-3 {
+    grid-area: grid__tiles-3;
+}
+
+.grid__tiles-4 {
+    grid-area: grid__tiles-4;
+}
+
+.grid__tiles-footer {
+    grid-area: grid__tiles-footer;
+    margin-top: 40px;
+}
+
+@include respond-to('tablet-medium-mx') {
+    .tiles-section {
+        &:not(.gallery--tiles) {
+            .figure-caption__title {
+                @include font-source-primary($size: 20px, $colour: false, $weight: false, $lh: 1.2);
+            }
+
+            .border-all {
+                &:not(:last-child) {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@include respond-to('extra-small') {
+    // .figure-caption {
+    //     .news-date {
+    //         font-size: 14px;
+    //     }
+    // }
+}
+
+@include respond-to('tablet') {}
+
+@include respond-to('tablet-medium') {
+
+    .tiles-section {
+        .sub-header--sm {
+            // grid-area: grid__tiles-header;
+            // margin-top: 98px;
+            margin-bottom: 0;
+            @include position($position: absolute, $top: 98px, $right: null, $bottom: null, $left: null, $z-index: initial);
+        }
+
+        .grid__tiles-footer-btn {
+            @include position($position: absolute, $top: null, $right: null, $bottom: 109px, $left: null, $z-index: initial);
+            margin-top: 0;
+        }
+
+        &:not(.gallery--tiles) {
+            .grid-parent {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                grid-template-rows: 182px 1fr 1fr 181px;
+                grid-gap: 0;
+                grid-template-areas: "grid__tiles-header grid__tiles-2 grid__tiles-2"
+                    "grid__tiles-1 grid__tiles-2 grid__tiles-2"
+                    "grid__tiles-1 grid__tiles-3 grid__tiles-4"
+                    "grid__tiles-footer grid__tiles-3 grid__tiles-4";
+            }
+        }
+
+        .tiles__grid-item {
+            width: 100%;
+
+            .figure-caption {
+                margin-top: 20px;
+            }
+        }
+
+        .grid__tiles-1,
+        .grid__tiles-3 {
+            border-right: 0;
+        }
+
+        .grid__tiles-2 {
+            border-bottom: 0;
+        }
+
+        .figure-lg-left {
+            // width: 520px;
+
+            .figure-img {
+                // height: 260px;
+                // width: 100%;
+                // height: auto;
+                // aspect-ratio: 2 / 1;
+            }
+        }
+
+        .figure-lg-right {
+            // width: 520px;
+
+            .figure-img {
+                // height: 222px;
+                // width: 100%;
+                // height: auto;
+                // aspect-ratio: 2 / 1;
+            }
+        }
+
+        .figure-md-left,
+        .figure-md-right {
+            max-width: 220px;
+
+            .figure-img {
+                // height: 220px;
+                // width: 100%;
+                // height: auto;
+                aspect-ratio: 1 / 1;
+            }
+        }
+    }
+
+    .padding-all {
+        padding: 24px;
+    }
+
+    .figure-caption__title {
+        margin-top: 16px;
+    }
+
+    .grid__tiles-3,
+    .grid__tiles-4 {
+        .figure-caption__title {
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    .grid__tiles-1 {
+        .figure-caption__title {
+            font-size: 34px;
+        }
+    }
+
+    .grid__tiles-2 {
+        .figure-caption__title {
+            font-size: 22px;
+        }
+    }
+
+}
+
+@include respond-to('laptop') {
+    .padding-all {
+        padding: 40px;
+    }
+
+    .grid__tiles-1 {
+        .figure-caption__title {
+            font-size: 44px;
+        }
+    }
+
+    .grid__tiles-2 {
+        .figure-caption__title {
+            font-size: 32px;
+        }
+    }
+}
+
+
+@include respond-to('laptop-medium') {
+    .figure-caption {
+        .news-date {
+            font-size: 14px;
+        }
+    }
+}

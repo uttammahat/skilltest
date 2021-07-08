@@ -1,0 +1,104 @@
+.gallery--tiles {
+    padding-bottom: 120px;
+    overflow: hidden;
+
+    .sub-header--sm {
+        margin-top: 0;
+    }
+
+    .figure-caption {
+        @include font-source-secondary();
+        font-size: 14px;
+        letter-spacing: 0.02em;
+    }
+
+    .figure-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid__gallery-tiles-1 {
+        grid-area: grid__gallery-tiles-1;
+    }
+
+    .grid__gallery-tiles-2 {
+        grid-area: grid__gallery-tiles-2;
+    }
+
+    .grid__gallery-tiles-3 {
+        grid-area: grid__gallery-tiles-3;
+    }
+
+    .grid__gallery-tiles-1,
+    .grid__gallery-tiles-3 {
+        figure {
+            max-width: 320px;
+        }
+
+        .figure-img {
+            // height: 220px;
+            aspect-ratio: 4 / 3;
+        }
+    }
+
+    .grid__gallery-tiles-2 {
+        figure {
+            max-width: 320px;
+        }
+
+        .figure-img {
+            aspect-ratio: 4 / 5;
+        }
+    }
+}
+
+
+// .gallery--tiles {
+//     .grid-parent {
+//         display: grid;
+//         grid-template-columns: 256px 256px 256px 256px;
+//         grid-template-rows: auto 1fr auto;
+//         grid-gap: 0;
+//         grid-template-areas: "grid__gallery-header grid__gallery-header grid__gallery-header"
+//             "grid__gallery-tiles-1 grid__gallery-tiles-2 grid__gallery-tiles-3"
+//             "grid__gallery-tiles-5 grid__gallery-tiles-5 grid__gallery-tiles-5";
+//     }
+// }
+.gallery--tiles {
+    .grid-parent {
+        align-items: flex-start;
+    }
+}
+
+.gallery__grid-item {
+
+    &:not(:last-child) {
+        // border-right: 0;
+    }
+}
+
+
+@include respond-to('tablet-medium') {
+    .gallery--tiles {
+
+        .sub-header--sm {
+            margin-bottom: 0;
+            @include position($position: absolute, $top: 32px, $right: null, $bottom: null, $left: null, $z-index: initial);
+        }
+
+        .grid-parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 116px auto 1fr 44px;
+            grid-gap: 0;
+            grid-template-areas: "unknown_grid grid__gallery-tiles-2 grid__gallery-tiles-3"
+                "grid__gallery-tiles-1 grid__gallery-tiles-2 grid__gallery-tiles-3"
+                "grid__gallery-tiles-1 grid__gallery-tiles-2 grid__gallery-tiles-4"
+                "grid__gallery-tiles-5 grid__gallery-tiles-2 grid__gallery-tiles-4";
+        }
+    }
+
+    .gallery__grid-item {
+        width: 100%;
+    }
+}

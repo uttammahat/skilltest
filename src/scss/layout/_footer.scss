@@ -1,0 +1,148 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+    // min-height: 415px;
+    padding-top: 58px;
+
+    @include respond-to('tablet-medium') {
+        padding-top: 76px;
+    }
+
+    background: $dark-grey;
+    @include font-source-secondary();
+
+
+    .footer-logo__img {
+        width: 100px;
+    }
+
+    a,
+    p {
+        color: $light-color;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        transition: all .2s ease;
+    }
+
+    .copyright-text {
+        text-align: center;
+        margin: 12px 0 0;
+    }
+
+    @include respond-to('tablet-medium') {
+        .copyright-text {
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+}
+
+.footer-top {
+    padding-bottom: 40px;
+
+    @include respond-to('tablet-medium') {
+        padding-bottom: 80px;
+    }
+
+    a:hover {
+        color: $light-color;
+        opacity: 0.8;
+    }
+
+}
+
+.footer__links-list {
+    .footer__list-item {
+        @include respond-to('extra-small-mx') {
+            width: calc(100% /2 - 25px);
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 0 0 32px;
+
+    @include respond-to('tablet-medium') {
+        padding: 40px 0;
+    }
+
+    a,
+    p {
+        opacity: 0.5;
+    }
+
+    a:hover {
+        color: $light-color;
+        opacity: 1;
+    }
+
+    .footer__list-item {
+        // margin-bottom: 4px;
+    }
+}
+
+.footer-divider--bottom,
+.footer-divider--top {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.footer-divider--bottom {
+    border-bottom-width: 0;
+}
+
+.footer__list {
+    &.footer-divider--top {
+        margin-top: 26px;
+        padding-top: 32px;
+        border-top-width: 1px;
+    }
+}
+
+@include respond-to('tablet-medium') {
+    .footer-divider--bottom {
+        border-bottom-width: 1px;
+        margin-bottom: 16px;
+        padding-bottom: 45px;
+    }
+
+    .footer__list {
+        &.footer-divider--top {
+            margin-top: 0;
+            padding-top: 0;
+            border-top-width: 0;
+        }
+    }
+}
+
+.footer__list {
+    @include flexbox;
+    @include align-items(flex-start);
+    @include flex-wrap(wrap);
+    padding: 0;
+}
+
+.footer__list-item {
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    @include respond-to('small') {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    @include respond-to('tablet-medium') {
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+        &:not(:last-child) {
+            margin-right: 58px;
+        }
+    }
+}

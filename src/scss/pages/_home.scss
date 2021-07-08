@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.hero-section {
+    padding-top: 20px;
+
+    @include respond-to('tablet-medium') {
+        padding: 40px 0 60px;
+    }
+
+    @include respond-to('laptop-medium') {
+        .stacked-img {
+            max-width: 1300px;
+        }
+    }
+
+}
+
+section.tiles-section {
+    padding-bottom: 64px;
+
+    @include respond-to('tablet-medium') {
+        padding: 60px 0 120px;
+    }
+}
+
+.hero__header {
+    margin: 0 0 20px;
+
+    @include respond-to('tablet-medium') {
+        margin-bottom: 0px;
+    }
+}
+
+section.breaker {
+    p {
+        margin-bottom: 0;
+
+    }
+
+    @include respond-to('tablet-medium-mx') {
+        padding-top: 40px;
+    }
+
+    @include respond-to('tablet-medium') {
+        padding-bottom: 60px;
+    }
+}
+
+section.beneficiaries {
+    .sub-header--sm {
+        margin-bottom: 60px;
+    }
+
+    @include respond-to('tablet-medium-mx') {
+        padding: 40px 0 68px;
+
+        .sub-header--sm {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+section.founders {
+    // .sub-header--sm {
+    //     margin-bottom: 60px;
+    // }
+
+    @include respond-to('tablet-medium-mx') {
+        padding: 40px 0;
+
+        // .sub-header--sm {
+        //     margin-bottom: 16px;
+        // }
+
+        .stacked-img {
+            margin-top: 16px;
+        }
+    }
+}
+
+section.tiles-section {
+    padding-top: 0;
+
+    @include respond-to('tablet-medium-mx') {
+        padding: 32px 0 64px;
+    }
+}
+
+.figures-wrapper {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.figures__item {
+    width: 100%;
+    margin-bottom: 24px;
+
+    .figure-img {
+        aspect-ratio: 3 / 4;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

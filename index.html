@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Basic page info -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>FEA Skill Test</title>
+
+        <!-- Website icon -->
+        <link rel="icon" type="image/png" href="http://placehold.it/20x20">
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" href="http://placehold.it/200x200">
+
+        <!-- CSS includes -->
+        <link rel="stylesheet" href="dist/css/style.css">
+
+        <!-- Meta information -->
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="robots" content="index, follow">
+
+        <!-- Social media (frontend only) -->
+        <meta property="og:site_name" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:locale" content="en_US">
+    </head>
+
+    <body>
+        <!-- header social-bar start -->
+        <header class="social-bar">
+            <div class="container">
+                <ul class="social-icon__list list-style-type-none">
+                    <li class="social-icon__list-item list-item--dark">
+                        <a href="#"></a>
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.38744 4.25625L9.42934 4.9483L8.73087 4.86356C6.18844 4.53872 3.96731 3.4371 2.08144 1.58693L1.15946 0.668915L0.92198 1.34684C0.419082 2.85804 0.740378 4.45398 1.78808 5.52735C2.34686 6.12054 2.22113 6.20528 1.25725 5.85219C0.92198 5.7392 0.628623 5.65446 0.600684 5.69683C0.502898 5.7957 0.838164 7.08092 1.10358 7.58937C1.46679 8.29553 2.20716 8.98758 3.01739 9.39716L3.70189 9.72199L2.89167 9.73612C2.10938 9.73612 2.08144 9.75024 2.16526 10.0468C2.44464 10.9649 3.54823 11.9394 4.77753 12.3631L5.64364 12.6597L4.88929 13.1116C3.77174 13.7613 2.45861 14.1285 1.14549 14.1567C0.516868 14.1709 0 14.2273 0 14.2697C0 14.411 1.70427 15.2019 2.69609 15.5126C5.67158 16.4306 9.20583 16.0351 11.86 14.4674C13.7459 13.3517 15.6318 11.1343 16.5118 8.98758C16.9868 7.84359 17.4617 5.75333 17.4617 4.75057C17.4617 4.10089 17.5037 4.01615 18.2859 3.23937C18.7469 2.78742 19.18 2.2931 19.2638 2.15187C19.4035 1.88352 19.3895 1.88352 18.6771 2.12362C17.4897 2.54732 17.3221 2.49083 17.9088 1.85528C18.3418 1.40333 18.8587 0.584174 18.8587 0.344077C18.8587 0.301707 18.6491 0.372324 18.4117 0.499434C18.1602 0.640668 17.6014 0.852518 17.1824 0.979629L16.428 1.21973L15.7435 0.753655C15.3663 0.499434 14.8355 0.216967 14.5561 0.132227C13.8437 -0.0655006 12.7541 -0.0372539 12.1115 0.18872C10.3653 0.824272 9.26171 2.46258 9.38744 4.25625Z"
+                                fill="#74788A" />
+                        </svg>
+                    </li>
+                    <li class="social-icon__list-item list-item--dark">
+                        <a href="#"></a>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.6399 9.80982C16.6399 6.49387 14.8803 4.95057 12.5332 4.95057C10.6395 4.95057 9.79171 5.9984 9.31832 6.73347V5.20436H5.75118C5.79819 6.21736 5.75118 16 5.75118 16H9.31832V9.97082C9.31832 9.64818 9.34147 9.32632 9.43578 9.09531C9.69356 8.45074 10.2805 7.78338 11.2659 7.78338C12.557 7.78338 13.0732 8.77331 13.0732 10.224V15.9997H16.6397L16.6399 9.80982Z"
+                                fill="#74788A" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.7764 5.20431H0.209685V16H3.7764V5.20431Z" fill="#74788A" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.01253 1.86473C3.98939 0.806221 3.23799 0 2.01784 0C0.797692 0 0 0.806221 0 1.86473C0 2.90131 0.774115 3.73074 1.97154 3.73074H1.99434C3.23799 3.73074 4.01253 2.90131 4.01253 1.86473Z"
+                                fill="#74788A" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- header social-bar end -->
+
+        <!-- navigation-bar start -->
+        <nav class="navbar navbar-expand-lg stacked-offset-bg --light-bg --left-offset">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/src/img/logo.svg" alt="Company Name">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <div class="collapse navbar-collapse navbarSupportedContent" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto  list-style-type-none">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Founders
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Maria Kenter</a>
+                                <a class="dropdown-item" href="#">Roger Septimus</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Beneficiaries</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Scholarships
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Sed ut tincidunt euismod malesuada</a>
+                                <a class="dropdown-item" href="#">Nunc, sit in varius pulvinar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Press</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navigation-bar end -->
+
+        <!-- main start -->
+        <main>
+            <!-- hero-section start -->
+            <section class="hero-section stacked-offset-bg --md-height --light-bg --left-offset">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-9">
+                            <h1 class="hero__header --primary-text-color">Ullamcorper diam turpis egestas egestas fames
+                                enim risus sed proin</h1>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-3 d-flex align-items-end">
+                            <button class="btn btn-ghost --with-icon ml-lg-auto" type="button">
+                                <span class="btn__title">Read more</span>
+                                <span class="btn__icon">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.14545 8L0 1.77778L1.75584 0L8.77921 7.11111C9.26407 7.60203 9.26407 8.39797 8.77921 8.88889L1.75584 16L0 14.2222L6.14545 8Z"
+                                            fill="#3C3C3C" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <figure class="figure stacked-img --left-offset">
+                    <img class="figure-img img-fluid" src="src/img/Hero/Image.jpg" alt="Hero">
+                </figure>
+            </section>
+            <!-- hero-section end -->
+
+            <!-- tiles section start -->
+            <section class="tiles-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-11 col-md-11 col-lg-10 offset-1">
+                            <h2 class="sub-header--sm --primary-text-color uppercase">Latest News
+                            </h2>
+                            <div class="grid-parent">
+                                <div class="tiles__grid-item grid__tiles-1 padding-all border-all border--light">
+                                    <figure class="figure figure-lg-left">
+                                        <img class="figure-img img-fluid" src="src/img/Hero/Image.jpg" alt="Hero Image"
+                                            loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            <p class="news-date uppercase"><span class="news-month">November
+                                                    19</span><span class="news-date"> 2020</span></p>
+                                            <p class="figure-caption__title">Molestie molesti metus,
+                                                tempus in commodo,
+                                                semper tellus</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="tiles__grid-item grid__tiles-2 padding-all border-all border--light">
+                                    <figure class="figure figure-lg-right">
+                                        <img class="figure-img img-fluid"
+                                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            <p class="news-date uppercase"><span class="news-month">November
+                                                    19</span><span class="news-date"> 2020</span></p>
+                                            <p class="figure-caption__title">Molestie molesti metus,
+                                                tempus in commodo,
+                                                semper tellus
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="tiles__grid-item grid__tiles-3 padding-all border-all border--light">
+                                    <figure class="figure figure-md-left">
+                                        <img class="figure-img img-fluid"
+                                            src="https://images.unsplash.com/photo-1624172468649-05f808032e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            <p class="news-date uppercase"><span class="news-month">November
+                                                    19</span><span class="news-date"> 2020</span></p>
+                                            <p class="figure-caption__title">In faucibus suspendisse magna massa nibh
+                                                elementum augue
+                                                phasellus tristique
+                                                senectus urna</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="tiles__grid-item grid__tiles-4 padding-all border-all border--light">
+                                    <figure class="figure figure-md-right">
+                                        <img class="figure-img img-fluid"
+                                            src="https://images.unsplash.com/photo-1462396240927-52058a6a84ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1266&q=80"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            <p class="news-date uppercase"><span class="news-month">November
+                                                    19</span><span class="news-date"> 2020</span></p>
+                                            <p class="figure-caption__title">Feugiat mollis quam sollicitudin egestas
+                                                adipiscing amet
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="grid__tiles-footer-btn">
+                                <button type="button" class="btn btn-txt --with-icon">
+                                    <span class="btn__title">See all news</span>
+                                    <span class="btn__icon">
+                                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M6.14545 8L0 1.77778L1.75584 0L8.77921 7.11111C9.26407 7.60203 9.26407 8.39797 8.77921 8.88889L1.75584 16L0 14.2222L6.14545 8Z"
+                                                fill="#3C3C3C" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- tiles section end -->
+
+            <!-- breaker section start -->
+            <section class="breaker stacked-offset-bg --lg-height --secondary-bg --right-offset">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-9 col-lg-9">
+                            <h5 class="sub-header--sm --light-text-color uppercase mb-4">Our Mission</h5>
+                            <h2 class="sub-header--lg --light-text-color mb-3">Imperdiet quis leo scelerisque nunc magna
+                                mattis
+                                vitae non non</h2>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-7">
+                            <div class="blurb --light-text-color">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <figure class="figure stacked-img --right-offset">
+                    <img class="figure-img img-fluid" src="src/img/our-mission.jpg" alt="Our Mission">
+                </figure>
+            </section>
+            <!-- breaker section end -->
+
+            <!-- promo section start -->
+            <section class="beneficiaries --white-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-11 col-md-11 col-lg-11 offset-1">
+                            <h2 class="sub-header--sm --primary-text-color uppercase">Beneficiaries</h2>
+                            <div class="figures-wrapper beneficiaries__grid-wrapper">
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-1.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Morbi magna turpis dolor adipiscing</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-2.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Curabitur cursus bibendum mauris placerat</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-3.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Sagittis quam nunc platea est</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-4.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Nisi, sed dui, ac enim</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-3.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Vitae sodales sit id ullamcorper</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-3.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Sagittis quam nunc platea est</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-2.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Curabitur cursus bibendum mauris placerat</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-3.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Sagittis quam nunc platea est</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-4.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Nisi, sed dui, ac enim</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-4.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Nisi, sed dui, ac enim</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="beneficiaries__figures-item">
+                                    <img class="figure-img img-fluid" src="/src/img/beneficiaries_image-3.jpg"
+                                        alt="beneficiaries_image">
+                                    <figcaption class="figure-caption">
+                                        <p>Vitae sodales sit id ullamcorper</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- promo section end -->
+
+            <!-- founder section start -->
+            <section class="founders stacked-offset-bg --white-bg --sm-height --accent-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-8">
+                            <h2 class="sub-header--sm --light-text-color uppercase">The Founders</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="multiple-stack-img-wrapper">
+                    <figure class="figure stacked-img ml-auto mr-auto">
+                        <img class="figure-img img-fluid" src="src/img/Founders/founder_maria_kenter.jpg"
+                            alt="Founder - Maria Kenter">
+                        <figcaption class="figure-caption sub-header--lg --light-text-color">
+                            <span class="d-block">Maria Kenter</span>
+                            <span class="d-block">Roger Septimus</span>
+                        </figcaption>
+                    </figure>
+                    <!-- <figure class="figure stacked-img --right-offset --left-offset">
+                        <img class="figure-img img-fluid" src="src/img/Hero/Image.jpg" alt="Founder - Roger Septimus">
+                        <figcaption class="figure-caption sub-header --light-text-color">Roger Septimus</figcaption>
+                    </figure> -->
+                </div>
+            </section>
+            <!-- founder section end -->
+
+            <!-- gallery tiles section start -->
+            <section class="tiles-section gallery--tiles --white-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-11 col-md-11 col-lg-10 offset-1">
+                            <h2 class="sub-header--sm --primary-text-color uppercase">Gallery</h2>
+                            <div class="grid-parent">
+                                <div
+                                    class="gallery__grid-item grid__gallery-tiles-1 padding-all border-all border--light-grey">
+                                    <figure class="figure">
+                                        <img class="figure-img img-fluid" src="src/img/gallery_image-1.jpg"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            Caption lorem ipsum dolor sit amet
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div
+                                    class="gallery__grid-item grid__gallery-tiles-2 padding-all border-all border--light-grey">
+                                    <figure class="figure">
+                                        <img class="figure-img img-fluid" src="/src/img/gallery_image-2.jpg"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            Caption lorem ipsum dolor sit ametdolor sit ametdolor sit amet
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div
+                                    class="gallery__grid-item grid__gallery-tiles-3 padding-all border-all border--light-grey">
+                                    <figure class="figure">
+                                        <img class="figure-img img-fluid" src="/src/img/gallery_image-3.jpg"
+                                            alt="Hero Image" loading="lazy">
+                                        <figcaption class="figure-caption">
+                                            CaptionLorem ipsum dolor sit amet consectetur adipisicing eli
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- gallery tiles section end -->
+
+        </main>
+        <!-- main end -->
+
+
+        <!-- footer start -->
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-10 col-md-10 col-lg-12 order-1 order-lg-1">
+                            <div class="footer-logo footer-divider footer-divider--bottom">
+                                <img class="footer-logo__img" src="/src/img/logo-white.svg" alt="Company Name">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-10 order-3 order-lg-2">
+                            <ul
+                                class="footer__list footer__links-list list-style-type-none footer-divider footer-divider--top">
+                                <li class="footer__list-item"><a href="#">Founders</a></li>
+                                <li class="footer__list-item"><a href="#">Beneficiaries</a></li>
+                                <li class="footer__list-item"><a href="#">Scholarships</a></li>
+                                <li class="footer__list-item"><a href="#">Press</a></li>
+                                <li class="footer__list-item"><a href="#">Blog</a></li>
+                                <li class="footer__list-item"><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 col-md-2 col-lg-2 order-2 order-lg-3">
+                            <ul class="footer__list social-icon__list list-style-type-none">
+                                <li class="footer__list-item social-icon__list-item list-item--light">
+                                    <a href="#"></a>
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.38744 4.25625L9.42934 4.9483L8.73087 4.86356C6.18844 4.53872 3.96731 3.4371 2.08144 1.58693L1.15946 0.668915L0.92198 1.34684C0.419082 2.85804 0.740378 4.45398 1.78808 5.52735C2.34686 6.12054 2.22113 6.20528 1.25725 5.85219C0.92198 5.7392 0.628623 5.65446 0.600684 5.69683C0.502898 5.7957 0.838164 7.08092 1.10358 7.58937C1.46679 8.29553 2.20716 8.98758 3.01739 9.39716L3.70189 9.72199L2.89167 9.73612C2.10938 9.73612 2.08144 9.75024 2.16526 10.0468C2.44464 10.9649 3.54823 11.9394 4.77753 12.3631L5.64364 12.6597L4.88929 13.1116C3.77174 13.7613 2.45861 14.1285 1.14549 14.1567C0.516868 14.1709 0 14.2273 0 14.2697C0 14.411 1.70427 15.2019 2.69609 15.5126C5.67158 16.4306 9.20583 16.0351 11.86 14.4674C13.7459 13.3517 15.6318 11.1343 16.5118 8.98758C16.9868 7.84359 17.4617 5.75333 17.4617 4.75057C17.4617 4.10089 17.5037 4.01615 18.2859 3.23937C18.7469 2.78742 19.18 2.2931 19.2638 2.15187C19.4035 1.88352 19.3895 1.88352 18.6771 2.12362C17.4897 2.54732 17.3221 2.49083 17.9088 1.85528C18.3418 1.40333 18.8587 0.584174 18.8587 0.344077C18.8587 0.301707 18.6491 0.372324 18.4117 0.499434C18.1602 0.640668 17.6014 0.852518 17.1824 0.979629L16.428 1.21973L15.7435 0.753655C15.3663 0.499434 14.8355 0.216967 14.5561 0.132227C13.8437 -0.0655006 12.7541 -0.0372539 12.1115 0.18872C10.3653 0.824272 9.26171 2.46258 9.38744 4.25625Z"
+                                            fill="white" />
+                                    </svg>
+                                </li>
+                                <li class="footer__list-item social-icon__list-item list-item--light">
+                                    <a href="#"></a>
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.6399 9.80982C16.6399 6.49387 14.8803 4.95057 12.5332 4.95057C10.6395 4.95057 9.79171 5.9984 9.31832 6.73347V5.20436H5.75118C5.79819 6.21736 5.75118 16 5.75118 16H9.31832V9.97082C9.31832 9.64818 9.34147 9.32632 9.43578 9.09531C9.69356 8.45074 10.2805 7.78338 11.2659 7.78338C12.557 7.78338 13.0732 8.77331 13.0732 10.224V15.9997H16.6397L16.6399 9.80982Z"
+                                            fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.7764 5.20431H0.209685V16H3.7764V5.20431Z" fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.01253 1.86473C3.98939 0.806221 3.23799 0 2.01784 0C0.797692 0 0 0.806221 0 1.86473C0 2.90131 0.774115 3.73074 1.97154 3.73074H1.99434C3.23799 3.73074 4.01253 2.90131 4.01253 1.86473Z"
+                                            fill="white" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <ul class="footer__list list-style-type-none">
+                                <li class="footer__list-item"><a href="#">Privacy Policy</a></li>
+                                <li class="footer__list-item"><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <p class="copyright-text">© 2021 Company Name. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- JavaScript includes -->
+        <script src="dist/js/app.js"></script>
+
+    </body>
+
+</html>

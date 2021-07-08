@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+    color: $dark-grey;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    letter-spacing: 0.02em;
+    @include flexbox;
+    @include align-items(center);
+}
+
+.btn-ghost {
+    border: 1px solid;
+    border-radius: 2px;
+
+    &.--with-icon {
+        .btn__title {
+            position: relative;
+        }
+
+        .btn__title::after {
+            content: '';
+            @include position($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: null, $z-index: initial);
+            width: 1px;
+            background: $light-border;
+        }
+    }
+
+    .btn__title {
+        padding: 13px 12px;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .btn__icon {
+        padding: 13px 16px;
+    }
+
+    @include respond-to('extra-small') {
+        .btn__title {
+            padding: 22px 19px;
+        }
+
+        .btn__icon {
+            padding: 22px 24px;
+        }
+    }
+
+    @include respond-to('laptop') {
+        .btn__title {
+            padding: 22px 19px;
+        }
+
+        .btn__icon {
+            padding: 22px 24px;
+        }
+    }
+
+    @include respond-to('laptop-medium') {
+        .btn__title {
+            padding: 23px 24px;
+        }
+
+        .btn__icon {
+            padding: 23px 29px;
+        }
+    }
+}
+
+.btn-txt {
+    padding: 0 0 12px;
+    border-bottom: 1px solid;
+
+    .btn__title {
+        margin-right: 12px;
+    }
+
+    .btn__icon {
+        padding: 1px 5px;
+    }
+}
+
+.btn-ghost,
+.btn-txt {
+    border-color: $light-border;
+
+    svg {
+        width: 7px;
+        height: 12px;
+    }
+
+    @include respond-to('extra-small') {
+        svg {
+            width: 10px;
+            height: 16px;
+        }
+    }
+}
+
+.btn-ghost:hover,
+.btn-txt:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+
+    .btn__title::after {
+        background: $brand-color;
+    }
+
+    .btn__icon {
+        path {
+            fill: $brand-color;
+        }
+    }
+}

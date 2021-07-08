@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #003a92 !default;
+
+/// Dusty Pink color
+/// @type Color
+$dusty-color: #f2efee !default;
+
+/// secondary color
+/// @type Color
+$secondary-color: #8C2531 !default;
+
+/// accent color
+/// @type Color
+$accent-color: #d7c3aE !default;
+
+/// light color
+/// @type Color
+$light-color: #fff !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #f2efee !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #3c3c3c !default;
+
+/// light border grey
+/// @type Color
+$light-border: #c4c4c4 !default;
+
+
+
+// Breakpoints
+$breakpoints: ('tablet-medium-mx': (max-width: 991.98px),
+    'extra-small-mx': (max-width: 375px),
+    'extra-small': (min-width: 376px),
+    'small': (min-width: 480px),
+    'medium-small': (min-width: 576px),
+    'tablet': (min-width: 768px),
+    'tablet-medium': (min-width: 992px),
+    'tablet-large': (min-width: 1024px),
+    'laptop': (min-width: 1200px),
+    'laptop-medium': (min-width: 1400px),
+    'dektop': (min-width: 1600px)) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/src/img/' !default;
+
+
+
+// @media (max-width: 575.98px) {}
+
+// @media (max-width: 480px) {}
+
+// @media (max-width: 375px) {}
+
+// @include respond-to('extra-small') {}
+
+// @include respond-to('small') {}
+
+// @include respond-to('medium-small') {}
+
+// @include respond-to('tablet') {}
+
+// @include respond-to('tablet-medium') {}
+
+// @include respond-to('tablet-large') {}
+
+// @include respond-to('laptop') {}
+
+// @include respond-to('laptop-medium') {}
+
+// @include respond-to('dektop') {}

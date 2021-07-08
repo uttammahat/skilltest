@@ -1,0 +1,39 @@
+.social-icon__list {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include flex-wrap(nowrap);
+}
+
+.social-icon__list-item {
+    position: relative;
+
+    a {
+        height: 100%;
+        display: block;
+        width: 100%;
+        position: absolute;
+    }
+
+    path {
+        transition: .2s ease;
+    }
+
+    &.list-item--dark:hover path,
+    &.list-item--light:hover path {
+        opacity: 0.5;
+    }
+
+    &.list-item--dark:hover {
+        path {
+            fill: $dark-grey;
+        }
+    }
+
+    &.list-item--light:hover {
+        path {
+            fill: $light-color;
+        }
+    }
+
+}

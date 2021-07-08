@@ -1,0 +1,11 @@
+.social-bar {
+    padding: 20px 0;
+
+    .social-icon__list-item:not(:last-child) {
+        margin-right: 32px;
+    }
+
+    @include respond-to('extra-small') {
+        padding: 22px 0;
+    }
+}

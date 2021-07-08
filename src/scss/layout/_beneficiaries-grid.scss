@@ -1,0 +1,22 @@
+.beneficiaries__grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    // grid-template-columns: repeat(8, calc(20%));
+    // grid-template-rows: minmax(150px, 1fr);
+    // grid-gap: 29px;
+
+}
+
+.beneficiaries__figures-item {
+    &:not(:last-child) {
+        margin-right: 29px;
+    }
+}
+
+@include respond-to('tablet-medium') {
+    .beneficiaries__figures-item {
+        min-height: 497px;
+    }
+}
